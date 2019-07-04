@@ -13,11 +13,11 @@ public class PathUtil {
      */
     public static String getRootPath(){
         String path=PathUtil.class.getResource("/").toString();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             int end = path.lastIndexOf("/");
             path = path.substring(0, end);
         }
         int index = path.indexOf(":");
-        return path.substring(index+1);
+        return path.substring(index+2);
     }
 }

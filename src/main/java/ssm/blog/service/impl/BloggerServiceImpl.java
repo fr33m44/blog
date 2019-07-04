@@ -16,17 +16,14 @@ public class BloggerServiceImpl implements BloggerService{
     @Resource
     private BloggerDao bloggerDao;
 
-    @Override
     public Blogger getBloggerData() {
         return bloggerDao.getBloggerData();
     }
 
-    @Override
     public Blogger getBloggerByName(String username) {
         return bloggerDao.getBloggerByName(username);
     }
 
-    @Override
     public Integer updateBlogger(Blogger blogger) {
         return bloggerDao.updateBlogger(blogger);
     }

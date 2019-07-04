@@ -25,7 +25,7 @@
      * @returns {string}
      */
 	function formatBlogType(val, row) {
-		return val.typeName;
+		//return val.typeName;
 	}
 
     /**

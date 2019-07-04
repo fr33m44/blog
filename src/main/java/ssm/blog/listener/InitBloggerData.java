@@ -1,5 +1,6 @@
 package ssm.blog.listener;
 
+import java.sql.DriverManager;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -58,8 +59,13 @@ public class InitBloggerData implements ServletContextListener, ApplicationConte
 	}
 
 	public void contextDestroyed(ServletContextEvent sce) {
-		// TODO Auto-generated method stub
-		
+		try{
+			while(DriverManager.getDrivers().hasMoreElements()){
+				DriverManager.deregisterDriver(DriverManager.getDrivers().nextElement());
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 
 	public void setApplicationContext(ApplicationContext applicationContext) 

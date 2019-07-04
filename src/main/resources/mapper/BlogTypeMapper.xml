@@ -12,10 +12,9 @@
 
     <insert id="addBlogType" parameterType="BlogType" keyProperty="id" useGeneratedKeys="true">
         insert into db_blog.t_blogtype
-        <trim prefix="(" suffix=")" suffixOverrides=",">
 
-        </trim>
         <trim prefix="values(" suffix=")" suffixOverrides=",">
+                NULL,
             <if test="typeName!=null and typeName!=''">
                 #{typeName},
             </if>

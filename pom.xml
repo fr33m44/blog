@@ -14,6 +14,8 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
+      <scope>provided</scope>
+
     </dependency>
     <!-- 添加jsp支持 -->
     <dependency>
